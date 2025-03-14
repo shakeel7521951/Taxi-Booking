@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const MainLayout = () => {
   return (
@@ -18,12 +20,15 @@ const router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
-      { path: "/" ,element:<Home />}],
+      { path: "/", element: <Home /> },
+      { path: "/contact-us", element: <Contact /> },
+      {path:"/about-us",element:<About />},
+    ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router}/>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;

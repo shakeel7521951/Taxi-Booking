@@ -1,5 +1,6 @@
 import React from "react";
 import header from "../../../src/assets/home/header.jpg";
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -29,12 +30,7 @@ const Header = () => {
         </p>
 
         <div className="mt-6 flex sm:justify-start justify-center">
-          <button className="relative overflow-hidden bg-amber-300 w-fit px-6 py-3 rounded-xl cursor-pointer font-semibold text-black transition-all duration-500 group">
-            <span className="absolute inset-0 bg-white w-0 transition-all duration-500 group-hover:w-full"></span>
-            <span className="relative z-10 group-hover:text-black">
-              Discover More
-            </span>
-          </button>
+         <Button text="Discover More" />
         </div>
       </div>
     </div>

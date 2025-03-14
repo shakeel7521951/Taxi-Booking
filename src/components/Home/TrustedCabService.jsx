@@ -4,6 +4,7 @@ import about2 from "../../assets/home/about1-2.png";
 import about3 from "../../assets/home/about1-3.png";
 import { CiCalendarDate } from "react-icons/ci";
 import { FaHeadset } from "react-icons/fa";
+import Button from "../Button";
 
 const TrustedCabService = () => {
   return (
@@ -55,13 +56,8 @@ const TrustedCabService = () => {
         </div>
 
         {/* Button */}
-        <div className="flex justify-center md:justify-start">
-          <button className="relative overflow-hidden bg-[#FFEE02] mt-6 px-6 py-3 rounded-xl cursor-pointer font-semibold text-black transition-all duration-500 group">
-            <span className="absolute inset-0 bg-black w-0 transition-all duration-500 group-hover:w-full"></span>
-            <span className="relative z-10 group-hover:text-white">
-              Book a Taxi
-            </span>
-          </button>
+        <div className="flex justify-center mt-10 md:justify-start">
+          <Button text="Book a Taxi" bgHover="black" textHover="white" cutHover="white"/>
         </div>
       </div>
     </div>
