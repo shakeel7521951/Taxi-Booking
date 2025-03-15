@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Services from "./pages/Services";
 
 const Home = lazy(() => import("./pages/Home"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/contact-us", element: <Contact /> },
       { path: "/about-us", element: <About /> },
+      {path:"/services",element:<Services />},
     ],
   },
 ]);

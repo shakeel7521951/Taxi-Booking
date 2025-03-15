@@ -5,21 +5,17 @@ import { FaChevronRight } from "react-icons/fa";
 const Header = ({name,title}) => {
   return (
     <div className="relative w-full">
-      {/* Background Image */}
       <img
         src={pageTitle}
         alt="Contact page poster"
-        className="w-full h-auto object-cover"
+        className="w-full h-auto min-h-[300px] object-cover"
       />
 
-      {/* Overlay with Title & Breadcrumbs */}
       <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#000000b3] bg-opacity-60 px-4">
-        {/* Title */}
         <h1 className="text-3xl md:text-5xl font-bold text-white text-center mb-3">
         {name}
         </h1>
 
-        {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-2 text-white text-sm md:text-base">
           <Link to="/" className="hover:underline">Home</Link>
           <FaChevronRight className="text-xs opacity-70" />
