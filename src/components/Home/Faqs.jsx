@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 import faq1 from "../../assets/home/faq1-1.jpg";
 
 const Faqs = () => {
@@ -47,9 +48,14 @@ const Faqs = () => {
                 {openIndex === index ? <FaChevronDown /> : <FaChevronRight />}
               </div>
               <hr className="mb-3" />
-              {openIndex === index && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={openIndex === index ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
                 <p className="mt-3 text-gray-600">{faq.answer}</p>
-              )}
+              </motion.div>
             </div>
           ))}
         </div>
