@@ -5,15 +5,21 @@ import googlePlay from "../assets/about/google-play.png";
 import { Link } from "react-router-dom";
 import { LuChevronsLeft } from "react-icons/lu";
 import Button from "../components/Button.jsx";
+import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-black p-10 mt-10">
+    <div className="bg-black px-10 pt-10 mt-10">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row justify-between gap-6">
         {/* Logo */}
         <div className="w-full md:w-[20%] flex justify-center md:justify-start">
-          <img src={logo} alt="company logo" loading="lazy" className="w-fit max-w-[170px]" />
+          <img
+            src={logo}
+            alt="company logo"
+            loading="lazy"
+            className="w-fit max-w-[170px]"
+          />
         </div>
 
         {/* Description */}
@@ -33,7 +39,9 @@ const Footer = () => {
           <div className="text-black flex items-center absolute top-2 right-14 md:top-3 md:right-8 lg:right-16 xl:right-20 2xl:right-24 max-w-[250px]">
             <HiOutlineDevicePhoneMobile className="text-4xl me-2" />
             <div>
-              <p className="uppercase text-sm md:font-semibold">Call for Taxi</p>
+              <p className="uppercase text-sm md:font-semibold">
+                Call for Taxi
+              </p>
               <p className="text-md md:text-xl lg:text-2xl">5267-214-392</p>
             </div>
           </div>
@@ -113,6 +121,20 @@ const Footer = () => {
               />
               <Button text="Subscribe" />
             </div>
+          </div>
+        </div>
+      </div>
+      <hr className="w-full text-gray-500 mt-8" />
+      <div className="container mx-auto mt-4 pb-4 flex justify-between items-center">
+        <div>
+          <p className="text-white">
+            © Copyright Citycar Reserved By Kodesolution.com
+          </p>
+        </div>
+        <div>
+          <div className="text-white items-center cursor-pointer flex gap-1 hover:text-[#FFEE02]">
+            <FaFacebook className="text-white" />
+            <p>Facebook</p>
           </div>
         </div>
       </div>
